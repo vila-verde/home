@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F0FFF0; /* Azul clarinho de bebê */
+    color: #4B3B2B; /* Marrom escuro */
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #006400; /* Verde escuro */
+}
+
+h1 {
+    font-size: 2.5em;
+    border-bottom: 2px solid #DAA520; /* Dourado */
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 40px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #006400; /* Verde escuro */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, #DAA520, #F0FFF0, #DAA520);
+    margin: 40px 0;
+}
