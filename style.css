@@ -1,18 +1,19 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #F0FFF0; /* Azul clarinho de bebê */
-    color: #4B3B2B; /* Marrom escuro */
+    background-color: #F0FFF0;
+    color: #4B3B2B;
     margin: 0;
     padding: 20px;
+    padding-top: 70px;
 }
 
 h1, h2 {
-    color: #006400; /* Verde escuro */
+    color: #006400;
 }
 
 h1 {
     font-size: 2.5em;
-    border-bottom: 2px solid #DAA520; /* Dourado */
+    border-bottom: 2px solid #DAA520;
     padding-bottom: 10px;
 }
 
@@ -31,7 +32,7 @@ li {
 }
 
 a {
-    color: #006400; /* Verde escuro */
+    color: #006400;
     text-decoration: none;
 }
 
@@ -44,4 +45,80 @@ hr {
     height: 1px;
     background-image: linear-gradient(to right, #DAA520, #F0FFF0, #DAA520);
     margin: 40px 0;
+}
+
+/* Estilo para o rodapé */
+footer {
+    color: #006400;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* Estilo para o botão do menu hambúrguer */
+.hamburger-menu {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px; /* Posição alterada para o lado esquerdo */
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #006400;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estilo padrão para o menu - Fica oculto em telas pequenas */
+.menu-fixo {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F0FFF0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.menu-fixo ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-fixo li {
+    margin: 0 15px;
+}
+
+.menu-fixo a {
+    color: #006400;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.menu-fixo a:hover {
+    color: #DAA520;
+    text-decoration: none;
+}
+
+/* Media Query - Telas maiores que 500px */
+@media screen and (min-width: 500px) {
+    .menu-fixo {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
 }
