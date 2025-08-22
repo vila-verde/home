@@ -60,7 +60,7 @@ footer {
     display: block;
     position: fixed;
     top: 20px;
-    left: 20px; /* Posição alterada para o lado esquerdo */
+    right: 20px;
     background: none;
     border: none;
     cursor: pointer;
@@ -113,12 +113,34 @@ footer {
 }
 
 /* Media Query - Telas maiores que 500px */
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 501px) {
     .menu-fixo {
         display: flex;
     }
 
     .hamburger-menu {
         display: none;
+    }
+}
+
+/* Media Query - Ajusta a imagem do favicon em telas de até 500px */
+@media screen and (max-width: 500px) {
+    #favicon\.png {
+        max-width: 50%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/* Media Query - Ajusta a imagem do favicon em telas maiores que 500px */
+@media screen and (min-width: 501px) {
+    #favicon\.png {
+        position: fixed;
+        top: 10px;
+        right: 20px; /* Alterado para mover a logo para a direita */
+        height: 50px;
+        width: auto;
+        z-index: 1001;
     }
 }
