@@ -1,3 +1,4 @@
+/* Estilos Gerais do Corpo do Site */
 body {
     font-family: Arial, sans-serif;
     background-color: #F0FFF0;
@@ -47,7 +48,7 @@ hr {
     margin: 40px 0;
 }
 
-/* Estilo para o rodapé */
+/* Estilo para o Rodapé */
 footer {
     color: #006400;
     text-align: center;
@@ -55,7 +56,7 @@ footer {
     margin-top: 50px;
 }
 
-/* Estilo para o botão do menu hambúrguer */
+/* Estilo para o Botão do Menu Hambúrguer */
 .hamburger-menu {
     display: block;
     position: fixed;
@@ -76,7 +77,7 @@ footer {
     transition: all 0.3s ease-in-out;
 }
 
-/* Estilo padrão para o menu - Fica oculto em telas pequenas */
+/* Estilo Padrão para o Menu - Fica oculto em telas pequenas */
 .menu-fixo {
     display: none;
     position: fixed;
@@ -112,6 +113,21 @@ footer {
     text-decoration: none;
 }
 
+/* Estilos para o Contêiner do Vídeo e o Iframe */
+.video-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    height: auto;
+    border-radius: 15px; /* Bordas arredondadas */
+    margin: 0 auto; /* Centraliza o vídeo */
+    display: block;
+}
+
 /* Media Query - Telas maiores que 500px */
 @media screen and (min-width: 501px) {
     .menu-fixo {
@@ -138,7 +154,7 @@ footer {
     #favicon\.png {
         position: fixed;
         top: 10px;
-        right: 20px; /* Alterado para mover a logo para a direita */
+        right: 20px;
         height: 50px;
         width: auto;
         z-index: 1001;
