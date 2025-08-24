@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Planejamento - Vila Verde</title>
+</head>
+<body>
+    <button id="hamburger-btn" class="hamburger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+    
+    <nav class="menu-fixo">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#planejamento">Planejamento</a></li>
+            <li><a href="implementacao.html">Implementação</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1 id="planejamento">Planejamento: O Primeiro Passo para o seu Jardim</h1>
+        <hr>
+        <p>
+            O planejamento é a base de qualquer projeto de paisagismo bem-sucedido. Na Vila Verde,
+            trabalhamos em conjunto com você para transformar sua visão em realidade, considerando
+            todos os detalhes, desde a escolha das plantas até a otimização do espaço.
+        </p>
+
+        <section class="filtro-vendas">
+            <h2>Nossos Projetos por Categoria</h2>
+            <div class="filtros">
+                <button class="filtro-btn" data-categoria="residencial">Jardins Residenciais</button>
+                <button class="filtro-btn" data-categoria="comercial">Espaços Comerciais</button>
+                <button class="filtro-btn" data-categoria="vertical">Jardins Verticais</button>
+                <button class="filtro-btn" data-categoria="telhado">Telhados Verdes</button>
+            </div>
+        </section>
+
+        <section id="conteudo-planejamento">
+            <article class="projeto-categoria residencial">
+                <h3>Planejamento de Jardins Residenciais</h3>
+                <p>Criamos ambientes personalizados que refletem seu estilo de vida e se tornam um refúgio de tranquilidade. Nossa equipe analisa a incidência de luz, o tipo de solo e suas preferências para garantir um resultado perfeito.</p>
+                <img src="https://via.placeholder.com/800x400" alt="Exemplo de Jardim Residencial">
+            </article>
+
+            <article class="projeto-categoria comercial" style="display:none;">
+                <h3>Planejamento de Espaços Comerciais</h3>
+                <p>Projetamos áreas verdes que valorizam seu negócio e proporcionam um ambiente acolhedor para clientes e colaboradores. Um espaço bem-planejado pode aumentar a produtividade e a satisfação no trabalho.</p>
+                <img src="https://via.placeholder.com/800x400" alt="Exemplo de Espaço Comercial">
+            </article>
+
+            <article class="projeto-categoria vertical" style="display:none;">
+                <h3>Planejamento de Jardins Verticais</h3>
+                <p>Solução ideal para otimizar espaços urbanos, os jardins verticais transformam paredes sem vida em obras de arte naturais. Eles ajudam a purificar o ar e a reduzir a temperatura do ambiente.</p>
+                <img src="https://via.placeholder.com/800x400" alt="Exemplo de Jardim Vertical">
+            </article>
+
+            <article class="projeto-categoria telhado" style="display:none;">
+                <h3>Planejamento de Telhados Verdes</h3>
+                <p>Os telhados verdes são a escolha sustentável para quem busca isolamento térmico e acústico. Eles reduzem o escoamento da água da chuva e criam um novo espaço de lazer.</p>
+                <img src="https://via.placeholder.com/800x400" alt="Exemplo de Telhado Verde">
+            </article>
+
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Vila Verde. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script-planejamento.js"></script>
+</body>
+</html>
