@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Espaços Comerciais - Vila Verde</title>
 </head>
 <body>
@@ -20,7 +21,7 @@
             <li><a href="index.html">Início</a></li>
             <li><a href="planejamento.html">Planejamento</a></li>
             <li><a href="implementacao.html">Implementação</a></li>
-            <li><a href="projeto-td.html">Projetos</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
         </ul>
     </nav>
 
@@ -42,13 +43,13 @@
         </section>
 
         <section class="galeria">
-            <article class="projeto-item comercial">
+            <article class="projeto-item comercial" data-aos="fade-up" data-aos-duration="1000">
                 <img src="01-img.png" alt="Projeto Comercial para escritório">
                 <h3>Área de Lazer - Coworking</h3>
                 <p>Criamos um ambiente relaxante e produtivo para colaboradores, com espécies de baixa manutenção.</p>
             </article>
 
-            <article class="projeto-item comercial">
+            <article class="projeto-item comercial" data-aos="fade-up" data-aos-duration="1000">
                 <img src="02-img.png" alt="Novo Projeto 2 - Terraço de Escritório">
                 <h3>Terraço Verde - Empresa E.</h3>
                 <p>Um terraço antes subutilizado, agora um espaço de convivência para funcionários, com vista para a cidade.</p>
@@ -67,5 +68,9 @@
     </footer>
 
     <script src="script-projetos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

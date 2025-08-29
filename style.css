@@ -46,57 +46,70 @@ a:hover {
 hr {
     border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, #DAA520, #F0FFF0, #DAA520);
-    margin: 40px 0;
+    background-image: linear-gradient(to right, #DAA520, transparent);
+    margin: 20px 0;
 }
 
-/* Estilos para o Rodapé */
-footer {
-    color: #006400;
+p {
+    line-height: 1.6;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 50px;
 }
 
-/* Estilo para o Botão do Menu Hambúrguer */
+/* Estilos para o Menu Hambúrguer (Mobile) */
 .hamburger-menu {
-    display: block;
     position: fixed;
     top: 20px;
     right: 20px;
-    background: none;
+    z-index: 1000;
+    background-color: #DAA520;
     border: none;
     cursor: pointer;
-    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 5px;
 }
 
-.hamburger-menu .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #006400;
-    margin: 5px auto;
-    transition: all 0.3s ease-in-out;
+.bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
 }
 
-/* Estilo Padrão para o Menu - Fica oculto em telas pequenas */
+/* Esconde o menu de hambúrguer em telas maiores */
+@media screen and (min-width: 501px) {
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+/* Estilos para o Menu Fixo (Desktop) */
 .menu-fixo {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #F0FFF0;
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px;
-    z-index: 1000;
+    z-index: 999;
+    padding: 10px 0;
 }
 
 .menu-fixo ul {
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: 0;
 }
 
 .menu-fixo li {
@@ -104,50 +117,203 @@ footer {
 }
 
 .menu-fixo a {
+    font-weight: bold;
     color: #006400;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: color 0.3s;
 }
 
-.menu-fixo a:hover {
-    color: #DAA520;
-    text-decoration: none;
+/* Estilos para o Hero Section e Conteúdo da Home */
+#topo {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Adiciona um espaço na parte de baixo da seção de filtros */
-.filtro-projetos {
-    margin-bottom: 25px;
-}
-
-/* Estilos para o contêiner dos botões de filtro */
-.filtros {
+.home-main {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: column;
+    gap: 30px;
+    text-align: left;
 }
 
-/* Estilos para os botões de filtro */
-.filtro-btn {
-    background-color: #006400;
-    color: #FFFFFF;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-size: 1em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
-}
-
-/* Efeito ao passar o mouse por cima (hover) */
-.filtro-btn:hover {
-    background-color: #DAA520;
+.home-main h2 {
+    text-align: center;
     color: #4B3B2B;
 }
 
-/* Efeito ao clicar no botão (active) */
+.home-main p {
+    text-align: justify;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Estilos para as Seções de Conteúdo */
+.conteudo-planejamento {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.secao-formulario {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.secao-formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.secao-formulario label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.secao-formulario input,
+.secao-formulario select,
+.secao-formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.secao-formulario textarea {
+    resize: vertical;
+}
+
+.secao-formulario fieldset {
+    border: 1px solid #DAA520;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.secao-formulario legend {
+    font-weight: bold;
+    color: #006400;
+    padding: 0 10px;
+}
+
+.checkbox-group, .radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-group input, .radio-group input {
+    width: auto;
+    margin-right: 10px;
+}
+
+.secao-formulario .nota {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 5px;
+}
+
+.secao-formulario .upload-fotos input {
+    border: none;
+    padding: 0;
+}
+
+.secao-formulario button {
+    margin-top: 20px;
+}
+
+/* Estilos para o Botão de Chamada para Ação (CTA) */
+.cta {
+    background-color: #4B3B2B;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cta h2 {
+    color: white;
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: #DAA520;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #B8860B;
+}
+
+/* Estilos para a galeria de projetos e filtro */
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.projeto-item {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+}
+
+.projeto-item h3 {
+    color: #006400;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.projeto-item p {
+    color: #4B3B2B;
+    font-size: 1em;
+}
+
+.filtro-projetos {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.filtro-projetos h2 {
+    margin-bottom: 15px;
+}
+
+.filtro-btn {
+    background-color: #DAA520;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.filtro-btn:hover {
+    background-color: #B8860B;
+}
+
+/* Estilos para o efeito ao clicar no botão (active) */
 .filtro-btn:active {
     background-color: #B8860B;
     transform: translateY(2px);
@@ -170,7 +336,9 @@ footer {
 
 /* Estilo para as imagens da galeria de projetos */
 .projeto-item img {
-    width: 100%;
+    display: block;
+    margin: auto;
+    width: 80%;
     height: 33vh;             /* Imagem ocupa 1/3 da altura da viewport */
     max-height: 400px;        /* Garante que a imagem não fique excessivamente alta em telas muito grandes */
     min-height: 200px;        /* Garante que a imagem não fique excessivamente pequena em telas muito curtas */
@@ -184,26 +352,32 @@ footer {
         display: flex;
     }
 
-    .hamburger-menu {
-        display: none;
+    body {
+        padding-top: 90px;
     }
 
-    #favicon\.png {
-        position: fixed;
-        top: 10px;
-        right: 20px;
-        height: 50px;
-        width: auto;
-        z-index: 1001;
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .home-main {
+        flex-direction: row;
+        gap: 50px;
+        align-items: center;
+        text-align: left;
+    }
+
+    .home-main h2 {
+        text-align: left;
     }
 }
 
-/* Media Query - Ajusta a imagem do favicon em telas de até 500px */
-@media screen and (max-width: 500px) {
-    #favicon\.png {
-        max-width: 50%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-    }
+#favicon.png {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

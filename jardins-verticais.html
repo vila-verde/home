@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Jardins Verticais - Vila Verde</title>
 </head>
 <body>
@@ -20,7 +21,7 @@
             <li><a href="index.html">Início</a></li>
             <li><a href="planejamento.html">Planejamento</a></li>
             <li><a href="implementacao.html">Implementação</a></li>
-            <li><a href="projeto-td.html">Projetos</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
         </ul>
     </nav>
 
@@ -42,13 +43,13 @@
         </section>
 
         <section class="galeria">
-            <article class="projeto-item vertical">
+            <article class="projeto-item vertical" data-aos="fade-up" data-aos-duration="1000">
                 <img src="01-img.png" alt="Jardim Vertical em prédio">
                 <h3>Mural Verde - Edifício Comercial</h3>
                 <p>Uma parede de 10 metros transformada em um jardim vertical exuberante, melhorando a qualidade do ar.</p>
             </article>
 
-            <article class="projeto-item vertical">
+            <article class="projeto-item vertical" data-aos="fade-up" data-aos-duration="1000">
                 <img src="03-img.png" alt="Novo Projeto 3 - Parede Verde">
                 <h3>Fachada Verde - Edifício R.</h3>
                 <p>Uma solução inovadora para isolamento térmico e beleza, com plantas que resistem a todas as estações.</p>
@@ -58,7 +59,7 @@
 
         <section class="cta">
             <h2>Pronto para Ter o Seu Próprio Jardim?</h2>
-            <a href="contato.html" class="cta-btn">Solicite um Orçamento</a>
+            <a href="solicitar-orcamento.php" class="cta-btn">Solicite um Orçamento</a>
         </section>
     </main>
     
@@ -67,5 +68,9 @@
     </footer>
 
     <script src="script-projetos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

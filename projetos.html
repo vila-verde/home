@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Projetos - Vila Verde</title>
 </head>
 <body>
@@ -44,25 +45,25 @@
         </section>
 
         <section class="galeria">
-            <article class="projeto-item residencial">
+            <article class="projeto-item residencial" data-aos="fade-up" data-aos-duration="1000">
                 <img src="01-img.png" alt="Projeto Residencial em São Paulo">
                 <h3>Jardim Residencial - São Paulo</h3>
                 <p>Um oásis urbano com plantas tropicais e um sistema de iluminação que destaca a beleza noturna.</p>
             </article>
 
-            <article class="projeto-item comercial">
+            <article class="projeto-item comercial" data-aos="fade-up" data-aos-duration="1000">
                 <img src="02-img.png" alt="Projeto Comercial para escritório">
                 <h3>Área de Lazer - Coworking</h3>
                 <p>Criamos um ambiente relaxante e produtivo para colaboradores, com espécies de baixa manutenção.</p>
             </article>
 
-            <article class="projeto-item vertical">
+            <article class="projeto-item vertical" data-aos="fade-up" data-aos-duration="1000">
                 <img src="03-img.png" alt="Jardim Vertical em prédio">
                 <h3>Mural Verde - Edifício Comercial</h3>
                 <p>Uma parede de 10 metros transformada em um jardim vertical exuberante, melhorando a qualidade do ar.</p>
             </article>
 
-            <article class="projeto-item residencial">
+            <article class="projeto-item residencial" data-aos="fade-up" data-aos-duration="1000">
                 <img src="04-img.png" alt="Jardim de Inverno em casa">
                 <h3>Jardim de Inverno - Casa de Campo</h3>
                 <p>Integramos a natureza ao interior da casa, com um jardim de inverno que floresce o ano todo.</p>
@@ -70,9 +71,9 @@
 
             </section>
 
-        <section class="cta">
+        <section class="cta" data-aos="fade-up" data-aos-duration="1000">
             <h2>Pronto para Ter o Seu Próprio Jardim?</h2>
-            <a href="contato.html" class="cta-btn">Solicite um Orçamento</a>
+            <a href="solicitar-orcamento.html" class="cta-btn">Solicite um Orçamento</a>
         </section>
     </main>
     
@@ -81,5 +82,9 @@
     </footer>
 
     <script src="script-projetos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
