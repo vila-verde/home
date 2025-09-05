@@ -9,12 +9,10 @@
     <title>Projetos - Vila Verde</title>
 </head>
 <body>
-        <button id="hamburger-btn" class="hamburger-menu">
-                <a href="menu.html">
+        <a href="menu.html" id="hamburger-btn" class="hamburger-menu">
             <span class="bar"></span>
-            <span class="bar"></span> 
-          </a>
-        </button>
+            <span class="bar"></span>
+        </a>
  
     
     <nav class="menu-fixo">
@@ -31,13 +29,14 @@
         <hr>
         <p>
             Conheça a qualidade e a paixão em cada um dos nossos trabalhos. Aqui, apresentamos uma
-            seleção dos projetos que transformaram espaços comuns em refúgios de beleza e tranquilidade.
+            seleção dos projetos de paisagismo que transformaram a vida de nossos clientes,
+            trazendo a natureza para mais perto, em ambientes residenciais, comerciais e com
+            soluções inovadoras como jardins verticais.
         </p>
 
-        <section class="filtro-projetos">
-            <h2>Galeria de Projetos</h2>
-            <div class="filtros">
-                <a href="projetos.html"><button class="filtro-btn" data-categoria="todos">Todos</button></a>
+        <section class="filtros">
+            <div class="filtro-botoes">
+                <a href="projetos.html"><button class="filtro-btn active" data-categoria="todos">Todos</button></a>
                 <a href="jardins-residenciais.html"><button class="filtro-btn" data-categoria="residencial">Jardins Residenciais</button></a>
                 <a href="espaços-comerciais.html"><button class="filtro-btn" data-categoria="comercial">Espaços Comerciais</button></a>
                 <a href="jardins-verticais.html"><button class="filtro-btn" data-categoria="vertical">Jardins Verticais</button></a>
@@ -52,7 +51,7 @@
             </article>
 
             <article class="projeto-item comercial" data-aos="fade-up" data-aos-duration="1000">
-                <img src="02-img.png" alt="Projeto Comercial para escritório">
+                <img src="02-img.png" alt="Área de Lazer - Coworking">
                 <h3>Área de Lazer - Coworking</h3>
                 <p>Criamos um ambiente relaxante e produtivo para colaboradores, com espécies de baixa manutenção.</p>
             </article>
@@ -81,7 +80,6 @@
         <p>&copy; 2024 Vila Verde. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="script-projetos.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();

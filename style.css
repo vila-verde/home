@@ -6,8 +6,6 @@ body {
     background-color: #F0FFF0;
     color: #4B3B2B;
     margin: 0;
-    padding: 20px;
-    padding-top: 70px;
 }
 
 h1, h2 {
@@ -46,225 +44,137 @@ a:hover {
 hr {
     border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, #DAA520, transparent);
-    margin: 20px 0;
-}
-
-p {
-    line-height: 1.6;
+    background-image: linear-gradient(to right, #DAA520, #006400, #DAA520);
+    margin: 20px auto;
+    width: 80%;
 }
 
 main {
-    max-width: 900px;
-    margin: 0 auto;
     padding: 20px;
-    text-align: center;
 }
 
-/* Estilos para o Menu Hambúrguer (Mobile) */
 .hamburger-menu {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    background-color: #DAA520;
-    border: none;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width: 40px;
-    height: 40px;
-    padding: 8px;
-    border-radius: 5px;
+    width: 30px;
+    height: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1000;
+    position: fixed;
+    top: 25px;
+    right: 20px; /* Alterado de 'left' para 'right' */
 }
 
 .bar {
     width: 100%;
-    height: 4px;
-    background-color: white;
-    border-radius: 2px;
+    height: 3px;
+    background-color: #4B3B2B;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Esconde o menu de hambúrguer em telas maiores */
-@media screen and (min-width: 501px) {
-    .hamburger-menu {
-        display: none;
-    }
+/* Menu Hambúrguer (Escondido por padrão em telas maiores) */
+.menu-hamburguer {
+    display: none;
 }
 
-/* Estilos para o Menu Fixo (Desktop) */
+/* Menu Fixo (Escondido por padrão em telas menores) */
 .menu-fixo {
     display: none;
+    background-color: rgba(240, 255, 240, 0.9);
+    padding: 10px;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    top: 0;
     z-index: 999;
-    padding: 10px 0;
 }
 
 .menu-fixo ul {
     display: flex;
     justify-content: center;
+    gap: 30px;
     margin: 0;
 }
 
-.menu-fixo li {
-    margin: 0 15px;
-}
-
 .menu-fixo a {
+    color: #4B3B2B;
     font-weight: bold;
-    color: #006400;
 }
 
-/* Estilos para o Hero Section e Conteúdo da Home */
-#topo {
-    text-align: center;
-    margin-bottom: 20px;
-}
 
+/* Home */
 .home-main {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    text-align: left;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .home-main h2 {
     text-align: center;
-    color: #4B3B2B;
+    border-bottom: 2px solid #DAA520;
+    padding-bottom: 10px;
+    width: 80%;
+    margin: 40px auto 20px auto;
 }
 
-.home-main p {
-    text-align: justify;
+.video-container {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
 }
 
 .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 800px;
+    height: 100%;
+    border-radius: 8px;
 }
 
-/* Estilos para as Seções de Conteúdo */
-.conteudo-planejamento {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+.info-home {
+    margin-top: 50px;
 }
 
-.secao-formulario {
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
+/* Filtros */
+.filtros {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.secao-formulario form {
+.botoes-filtros {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.secao-formulario label {
-    font-weight: bold;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
     margin-top: 10px;
 }
 
-.secao-formulario input,
-.secao-formulario select,
-.secao-formulario textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.secao-formulario textarea {
-    resize: vertical;
-}
-
-.secao-formulario fieldset {
-    border: 1px solid #DAA520;
-    border-radius: 5px;
-    padding: 15px;
-    margin-top: 20px;
-}
-
-.secao-formulario legend {
-    font-weight: bold;
-    color: #006400;
-    padding: 0 10px;
-}
-
-.checkbox-group, .radio-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.checkbox-group input, .radio-group input {
-    width: auto;
-    margin-right: 10px;
-}
-
-.secao-formulario .nota {
-    font-size: 0.9em;
-    color: #777;
-    margin-top: 5px;
-}
-
-.secao-formulario .upload-fotos input {
+.filtro-btn, .cta-btn, button {
+    background-color: #006400;
+    color: #F0FFF0;
+    padding: 10px 20px;
     border: none;
-    padding: 0;
-}
-
-.secao-formulario button {
-    margin-top: 20px;
-}
-
-/* Estilos para o Botão de Chamada para Ação (CTA) */
-.cta {
-    background-color: #4B3B2B;
-    color: white;
-    padding: 30px;
-    text-align: center;
-    border-radius: 10px;
-    margin-top: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.cta h2 {
-    color: white;
-    font-size: 1.5em;
-    margin-top: 0;
-}
-
-.cta-btn {
-    display: inline-block;
-    background-color: #DAA520;
-    color: white;
-    padding: 12px 25px;
     border-radius: 5px;
-    text-decoration: none;
+    cursor: pointer;
+    font-size: 1em;
     font-weight: bold;
-    margin-top: 15px;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.cta-btn:hover {
-    background-color: #B8860B;
+.filtro-btn:hover, .cta-btn:hover, button:hover {
+    background-color: #008000;
 }
 
-/* Estilos para a galeria de projetos e filtro */
+
+/* Galeria */
 .galeria {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 20px;
     margin-top: 30px;
 }
 
@@ -272,70 +182,125 @@ main {
     background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    padding: 15px;
     text-align: center;
-    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.projeto-item:hover {
+    transform: translateY(-5px);
+}
+
+.projeto-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .projeto-item h3 {
     color: #006400;
-    font-size: 1.5em;
     margin-top: 10px;
 }
 
-.projeto-item p {
-    color: #4B3B2B;
-    font-size: 1em;
-}
-
-.filtro-projetos {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.filtro-projetos h2 {
-    margin-bottom: 15px;
-}
-
-.filtro-btn {
+/* CTA */
+.cta {
     background-color: #DAA520;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
+    color: #4B3B2B;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.cta-btn {
+    background-color: #4B3B2B;
+    color: #F0FFF0;
+    text-transform: uppercase;
+}
+
+.cta-btn:hover {
+    background-color: #5C4B3D;
+}
+
+/* Formulário de Orçamento */
+form {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    color: #006400;
 }
 
-.filtro-btn:hover {
-    background-color: #B8860B;
+form input[type="text"], form input[type="tel"], form input[type="email"], form textarea {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-/* Estilos para o efeito ao clicar no botão (active) */
-.filtro-btn:active {
-    background-color: #B8860B;
-    transform: translateY(2px);
+form textarea {
+    resize: vertical;
+    min-height: 100px;
 }
 
-/* Estilos para o Contêiner do Vídeo e o Iframe */
-.video-container {
+.radio-group {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.radio-group input {
+    margin-right: 10px;
+}
+
+.upload-fotos {
+    border: 1px dashed #ccc;
+    padding: 15px;
+    border-radius: 8px;
     margin-top: 20px;
 }
 
-.video-container iframe {
-    height: auto;
-    border-radius: 15px;
-    margin: 0 auto;
-    display: block;
+.upload-fotos label {
+    margin-top: 0;
 }
 
-/* Estilo para as imagens da galeria de projetos */
-.projeto-item img {
+.nota {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #4B3B2B;
+    color: #F0FFF0;
+    border-top: 5px solid #DAA520;
+}
+
+footer a {
+    color: #F0FFF0;
+}
+
+/* Título e Texto da Página Principal - Home */
+.main-title {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Imagens para os artigos */
+article img {
     display: block;
     margin: auto;
     width: 80%;
@@ -350,10 +315,6 @@ main {
 @media screen and (min-width: 501px) {
     .menu-fixo {
         display: flex;
-    }
-
-    body {
-        padding-top: 90px;
     }
 
     .galeria {
@@ -373,11 +334,7 @@ main {
 }
 
 #favicon.png {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-top: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    /* Regras base para todos os dispositivos */
+    max-width: 300px; /* Garante que a imagem não vai ultrapassar o contêiner */
+    height: auto;
 }

@@ -8,19 +8,17 @@
     <title>Jardins Residenciais - Vila Verde</title>
 </head>
 <body>
-        <button id="hamburger-btn" class="hamburger-menu">
-               <a href="menu.html">
+        <a href="menu.html" id="hamburger-btn" class="hamburger-menu">
  <span class="bar"></span>
             <span class="bar"></span>
-            </a>
-</button>
+</a>
     
     <nav class="menu-fixo">
         <ul>
             <li><a href="index.html">Início</a></li>
             <li><a href="planejamento.html">Planejamento</a></li>
             <li><a href="implementacao.html">Implementação</a></li>
-            <li><a href="projeto-td.html">Projetos</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
         </ul>
     </nav>
 
@@ -31,16 +29,15 @@
             Explore nossa galeria de projetos residenciais, onde transformamos quintais e varandas em verdadeiros santuários pessoais. Cada projeto é único, pensado para o seu conforto e o seu estilo de vida.
         </p>
 
-        <section class="filtro-projetos">
-            <h2>Galeria de Projetos</h2>
-            <div class="filtros">
-                <a href="projetos.html"><button class="filtro-btn" data-categoria="todos">Todos</button></a>
+        <section class="filtros">
+            <p>Selecione um filtro:</p>
+            <div class="botoes-filtros">
                 <a href="jardins-residenciais.html"><button class="filtro-btn" data-categoria="residencial">Jardins Residenciais</button></a>
                 <a href="espaços-comerciais.html"><button class="filtro-btn" data-categoria="comercial">Espaços Comerciais</button></a>
                 <a href="jardins-verticais.html"><button class="filtro-btn" data-categoria="vertical">Jardins Verticais</button></a>
             </div>
         </section>
-
+        
         <section class="galeria">
             <article class="projeto-item residencial">
                 <img src="01-img.png" alt="Projeto Residencial em São Paulo">
@@ -64,7 +61,7 @@
 
         <section class="cta">
             <h2>Pronto para Ter o Seu Próprio Jardim?</h2>
-            <a href="solicitar-orcamento.php" class="cta-btn">Solicite um Orçamento</a>
+            <a href="solicitar-orcamento.html" class="cta-btn">Solicite um Orçamento</a>
         </section>
     </main>
     
@@ -72,6 +69,9 @@
         <p>&copy; 2024 Vila Verde. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="script-projetos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
