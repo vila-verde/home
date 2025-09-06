@@ -300,7 +300,7 @@ footer a {
 }
 
 /* Imagens para os artigos */
-article img {
+article > img {
     display: block;
     margin: auto;
     width: 80%;
@@ -337,4 +337,7 @@ article img {
     /* Regras base para todos os dispositivos */
     max-width: 300px; /* Garante que a imagem não vai ultrapassar o contêiner */
     height: auto;
+}
+#favicon img {
+    max-width: 500px;
 }
