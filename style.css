@@ -298,7 +298,9 @@ footer a {
     text-align: center;
     margin-top: 40px;
 }
-
+article{
+    margin-bottom: 25vh;
+}
 /* Imagens para os artigos */
 article > img {
     display: block;
